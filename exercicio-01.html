@@ -7,7 +7,24 @@
     <title>Document</title>
 </head>
 <body>
+    <p>1) Escreva um programa para ler o raio de um círculo, <br>
+        calcular e escrever a sua área (Pi * (raio * raio)) </p>
+
+        <form>
+            <input type="text" id="raio">
+            <button type="button" onclick="areaCirculo()">calculo</button>
+        </form>
+         
+        <span id="resposta"></span>
+        
+    </body>
+    </html>
+
+           <script>
+               function areaCirculo() {
+                  var r = parseFloat(document.getElementById("raio").value);
+                  var resposta = 3.14 * (r * r);
+                  document.getElementById('resposta').innerHTML = '<b> resposta:</b>' + resposta;
+               }
+           </script>
     
-    
-</body>
-</html>
