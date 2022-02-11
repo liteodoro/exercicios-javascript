@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Escreva um programa para calcular e imprimir o número de lâmpadas necessárias para <br>
+        iluminar um determinado cômodo de uma residência. Dados de entrada: a potência da lâmpada <br>
+        utilizada (em watts), as dimensões (largura e comprimento, em metros) do cômodo. <br>
+        Considere que a potência necessária é de 18 watts por metro quadrado.
+    </p>
+
+    <form>
+        
+            <input type="text" id="lamp" placeholder="Digite outro valor potencia"><br>
+            <input type="text" id="c" placeholder="Digite outro valor comprimento"><br>
+            <input type="text" id="l" placeholder="Digite outro valor largura"><br>
+            <button type="button" onclick="lampada()">clica</button>
+           
+        
+    </form>
+     
+    <span id="resposta"></span>
+    
+</body>
+</html>
+
+       <script>
+           function lampada() {
+              var lamp = parseFloat(document.getElementById("lamp").value);
+              var l = parseFloat(document.getElementById("l").value);
+              var c = parseFloat(document.getElementById("c").value);
+              var resposta = ((l * c) * 18) / lamp;
+              document.getElementById("resposta").innerHTML = '<b> resposta:</b>' + resposta;
+           }
+       </script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        6) Um motorista de táxi deseja calcular o rendimento de seu carro na praça. <br>
+        Sabendo-se que o preço do combustível é de R$ 4,87, escreva um programa para ler: <br>
+        a marcação do odômetro (Km) no início do dia, a marcação (Km) no final do dia,<br>
+         o número de litros de combustível gasto e o valor total (R$) recebido dos passageiros.<br>
+          Calcular e escrever: a média do consumo em Km/L e o lucro (líquido) do dia.
+    </p>
+
+    <form>
+        <input type="text" id="odometro" placeholder="Digite odometro"><br>
+        <input type="text" id="inicioD" placeholder="Digite inicio dia"><br>
+        <input type="text" id="km" placeholder="Digite km"><br>
+        <input type="text" id="fD" placeholder="Digite final dia"><br>
+        <input type="text" id="combustivel" placeholder="Digite combustivel"><br>
+        <input type="text" id="payPass" placeholder="Digite valor total "><br>
+        <button type="button" onclick="mediaConsumo()">clica</button>
+       
+    
+   </form>
+    
+</body>
+</html>
+
+<script>
+    function mediaConsumo() {
+       var odometro = parseFloat(document.getElementById("odometro").value);
+       var inicioD = parseFloat(document.getElementById("inicioD").value);
+       var km = parseFloat(document.getElementById("km").value);
+       var fD = parseFloat(document.getElementById("fD").value);
+       var combustivel = parseFloat(document.getElementById("combustivel").value);
+       var paypass = parseFloat(document.getElementById("paypass").value);
+       var resposta = (inicioD);
+       document.getElementById("resposta").innerHTML = '<b> resposta:</b>' + resposta;
+    }
+</script>

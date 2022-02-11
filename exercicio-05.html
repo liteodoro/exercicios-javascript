@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+       Escreva um programa para ler as dimensões de uma cozinha retangular <br>
+       (comprimento, largura e altura), 
+       calcular e escrever a quantidade de caixas de azulejos para se colocar em todas as suas <br>
+       paredes (considere que não será descontada a área ocupada por portas e janelas).<br>
+        Cada caixa de azulejos possui 1,5 m2.  
+    </p>
+    <form>
+        <input type="text" id="a" placeholder="Digite outro valor altura"><br>
+        <input type="text" id="c" placeholder="Digite outro valor comprimento"><br>
+        <input type="text" id="l" placeholder="Digite outro valor largura"><br>
+        <button type="button" onclick="area()">clica</button>
+       
+    
+</form>
+ 
+<span id="resposta"></span>
+    
+</body>
+</html>
+
+<script>
+    function area() {
+       var a = parseFloat(document.getElementById("a").value);
+       var c = parseFloat(document.getElementById("c").value);
+       var l = parseFloat(document.getElementById("l").value);
+       var resposta = ((l * c) * 1.5);
+       document.getElementById("resposta").innerHTML = '<b> resposta:</b>' + resposta;
+    }
+</script>

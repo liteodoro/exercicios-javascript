@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        7) A equipe Benneton-Ford deseja calcular o número mínimo de litros que deverá colocar <br>
+        no tanque de seu carro para que ele possa percorrer um determinado número de voltas até o <br>
+        primeiro reabastecimento. Escreva um programa que leia o comprimento da pista (em metros),<br>
+         o número total de voltas a serem percorridas no grande prêmio, o número de abastecimentos <br>
+         desejados e o consumo de combustível do carro (em Km/L). Calcular e escrever o <br>
+         número mínimo de litros necessários para percorrer até o primeiro reabastecimento.<br>
+          OBS: Considere que o número de voltas entre os abastecimentos é o mesmo. 
+
+    </p>
+    
+    <form>
+        <input type="text" id="v" placeholder="Digite quatidade de voltas"><br>
+        <input type="text" id="c" placeholder="Digite outro valor comprimento"><br>
+        <button type="button" onclick="minLitros()">clica</button>
+       
+    
+</form>
+ 
+<span id="resposta"></span>
+
+</body>
+</html>
+<script>
+    function minLitros() {
+       var v = parseFloat(document.getElementById("v").value);
+       var c = parseFloat(document.getElementById("c").value);
+       var resposta = ((v * c) );
+       document.getElementById("resposta").innerHTML = '<b> resposta:</b>' + resposta;
+    }
+</script>
