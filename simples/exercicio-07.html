@@ -19,22 +19,26 @@
     </p>
     
     <form>
-        <input type="text" id="v" placeholder="Digite quatidade de voltas"><br>
-        <input type="text" id="c" placeholder="Digite outro valor comprimento"><br>
-        <button type="button" onclick="minLitros()">clica</button>
-       
-    
-</form>
- 
-<span id="resposta"></span>
-
+        <input type="text" id="c" placeholder="Comprimento?">
+        <input type="text" id="totVoltas" placeholder="Total de voltas?">
+        <input type="text" id="qabast" placeholder="abastecimentos?">
+        <input type="text" id="consumo" placeholder="Consumo?">
+        <button type="button" onclick="qLitros()">clicar</button>
+    </form>
+    <span id="saida"></span>
 </body>
+
 </html>
+
 <script>
-    function minLitros() {
-       var v = parseFloat(document.getElementById("v").value);
-       var c = parseFloat(document.getElementById("c").value);
-       var resposta = ((v * c) );
-       document.getElementById("resposta").innerHTML = '<b> resposta:</b>' + resposta;
+    function qLitros() {
+        var c = parseFloat(document.getElementById("c").value);
+        var totVoltas = parseInt(document.getElementById("totVoltas").value);
+        var qAbast = parseInt(document.getElementById("qabast").value);
+        var consumo = parseFloat(document.getElementById("consumo").value);
+
+        var litros = (((c / 1000) * totVoltas) / consumo) / qAbast;
+
+        document.getElementById("saida").innerHTML = "Quantidade de litros:" + litros + "L";
     }
 </script>

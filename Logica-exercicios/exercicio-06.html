@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        6) Reescreva o programa do exercício anterior considerando o zero como neutro, <br>
+        ou seja, se for digitado o valor zero, escrever a palavra zero. 
+        
+    </p>
+
+    <form>
+        <input type="text" id="numero" placeholder="Digite um numero" onkeyup="vNumero()">
+        <button type="button" onclick="vNumero()">clica</button>
+    </form>
+
+    <span id="sai"></span>
+
+</body>
+
+</html>
+
+<script>
+    function vNumero() {
+        var n = parseFloat(document.getElementById("numero").value);
+        
+        if (n > 0) {
+            document.getElementById("sai").innerHTML = "POSITIVO";
+
+        } else if (n == 0) {
+            document.getElementById("sai").innerHTML = "ZERO";
+
+        } else {
+            document.getElementById("sai").innerHTML = "NEGATIVO";
+
+          }
+    }
+</script>
+    
+</body>
+</html>

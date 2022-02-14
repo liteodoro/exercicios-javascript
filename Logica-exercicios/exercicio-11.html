@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        1) Escreva um programa que verifique a validade de uma senha fornecida pelo usuário.<br>
+         A senha válida é o número 1234. Devem ser impressas as seguintes mensagens: 
+                ACESSO PERMITIDO caso a senha seja válida. 
+                ACESSO NEGADO caso a senha seja inválida
+
+    </p>
+
+    <form>
+
+        <input type="text" id="n1" placeholder="Digite a Senha:" onkeyup="senha()">
+        <button type="button" onclick="senha()">clicar</button>
+
+    </form>
+
+    <span id="saida"></span>
+</body>
+
+</html>
+
+<script>
+    function senha() {
+        var n1 = parseInt(document.getElementById("n1").value);
+
+        if (n1 == 1234) {
+            document.getElementById("saida").innerHTML = "Acesso permitido";
+
+        } else {
+            document.getElementById("saida").innerHTML = "acesso negado!!";
+        }
+    }
+</script>
+    
+</body>
+</html>

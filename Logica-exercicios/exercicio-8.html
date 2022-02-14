@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ept-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        8) Escreva um programa para ler o ano de nascimento de uma pessoa e escrever uma <br>
+        mensagem que diga se ela poderá ou não votar este ano (não é necessário considerar<br>
+         o mês em que ela nasceu). 
+        
+    </p>
+    <form>
+        <input type="text" id="numero" placeholder="Digite nascimento" onkeyup="anoNasc()">
+        <button type="button" onclick="anoNasc()">clica</button>
+    </form>
+
+    <span id="sai"></span>
+
+</body>
+
+</html>
+
+<script>
+    function anoNasc() {
+        var numero = parseFloat(document.getElementById("numero").value);
+        if (numero < 2003 ) {
+            document.getElementById("sai").innerHTML = "Vota";
+        } else (numero > 2005) 
+            document.getElementById("sai").innerHTML = "não vota";
+         
+    }
+</script>
+    
+</body>
+</html>
