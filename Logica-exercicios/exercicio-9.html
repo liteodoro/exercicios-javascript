@@ -17,7 +17,7 @@
     </p>
     
     <form>
-        <input type="text" id="maca" placeholder="Digite quantidade" onkeyup="frutaM()">
+        <input type="text" id="maca" placeholder="Digite quantidade">
         <button type="button" onclick="frutaM()">clica</button>
     </form>
 
@@ -31,17 +31,16 @@
     function frutaM() {
 
         var maca = parseInt(document.getElementById("maca").value);
+        var valor = 0;
 
-        if (maca <= 11 ) {
-            document.getElementById("sai").innerHTML = "0,30 cada";
-            /*var quant = (maca * 0,30);
-            document.getElementById("sai").innerHTML = "Preço:" + quant + "Maçãs";*/
+        if (maca >= 12 ) {
+            valor = .25;
 
         } else { 
-               document.getElementById("sai").innerHTML = "0,25 cada";
-               /*var quant = (maca * 0,25);
-                document.getElementById("sai").innerHTML = "Preço:" + quant + "Maçãs";*/
+             valor = .30;
+               
              }
+             document.getElementById("sai").innerHTML = "Preço:" + (maca * valor );
     }
 </script>
     
