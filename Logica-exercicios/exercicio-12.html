@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <P>
+        12) Tendo como entrada a altura e o sexo (codificado da seguinte forma: 1:feminino 2:masculino) <br>
+        de uma pessoa, construa um programa que calcule e imprima seu peso ideal,<br>
+         utilizando as seguintes fórmulas: 
+                   para homens : (72.7 * h) – 58 
+                   para mulheres : (62.1 * h) – 44.7 
+                   Observação: Altura = h (na fórmula acima).
+
+    </P>
+    
+    <form>
+
+        <input type="text" id="1" placeholder="1" onkeyup="fM()">
+        <input type="text" id="2" placeholder="2" onkeyup="fM()">
+        <input type="text" id="h" placeholder="Digite sua Altura: " onkeyup="fM()">
+        <button type="button" onclick="fM()">clicar</button>
+
+    </form>
+
+    <span id="saida"></span>
+</body>
+
+</html>
+
+<script>
+    function fM() {
+        var imc = parseFloat(document.getElementById("imc").value);
+        var h = parseFloat(document.getElementById("imc").value);
+
+        if ( 1 ) {
+            imc = (62.1 * h) - 58;
+            document.getElementById("saida").innerHTML = "imc: "+ imc + "imc Mulher";
+
+        } else {
+            imc = (72.7 * h) - 44.7;
+            document.getElementById("saida").innerHTML = "imc: " + imc + "imc Homem";
+        }
+    }
+</script>
+    

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        13) Escreva um programa para ler um número inteiro<br>
+        (considere que serão lidos apenas valores positivos e inteiros)<br>
+         e escrever se é par ou ímpar. 
+
+    </p>
+    
+    <form>
+
+        <input type="text" id="n1" placeholder="Digite a numero:" onkeyup="nInteiro()">
+        <button type="button" onclick="nInteiro()">clicar</button>
+
+    </form>
+
+    <span id="saida"></span>
+</body>
+
+</html>
+
+<script>
+    function nInteiro() {
+        var n1 = parseInt(document.getElementById("n1").value);
+
+        if (n1 ) {
+            document.getElementById("saida").innerHTML = "Ímpar";
+
+        } else {
+            document.getElementById("saida").innerHTML = "Par!!";
+        }
+    }
+</script>
+    
