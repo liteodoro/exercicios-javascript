@@ -23,7 +23,7 @@
         <input type="number" id="sub" placeholder="Digite 2 para subtração: ">
         <input type="number" id="div" placeholder="Digite 3 para Divisão: ">
         <input type="number" id="mult" placeholder="Digite 3 para Multiplicação: ">
-        <button type="button" onclick="mainController()">Resultado</button>
+        <button type="button" onclick="mainController()">clica</button>
     </form>
     <span id="saida"></span>
 </body>
@@ -39,7 +39,7 @@
         var op3 = parseInt(document.getElementById("div").value);
         var op4 = parseInt(document.getElementById("mult").value);
         
-        document.getElementById("saida").innerHTML = ladoEmedida(num1, num2, op1, op2, op3);
+        document.getElementById("saida").innerHTML = ladoEmedida(num1, num2, op1, op2, op3, op4);
     }
 
     function ladoEmedida() {
