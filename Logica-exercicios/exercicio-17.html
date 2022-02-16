@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        17) Escreva um programa para ler 2 valores inteiros e uma das seguintes operações <br>
+        a serem  executadas (codificada da seguinte forma: <br>
+        1. Adição, 2.Subtração, 3.Divisão, 4.Multiplicação). <br>
+        Calcular e escrever o resultado dessa operação sobre os dois valores lidos. <br>
+        Observação: Considere que só serão lidos os valores 1, 2, 3 ou 4.
+          
+    </p>
+    
+    <form>
+        <input type="number" id="v1" placeholder="Digite um numero: ">
+        <input type="number" id="v2" placeholder="Digite o segundo numero: ">
+        <input type="number" id="adicao" placeholder="Digite 1 para Soma: ">
+        <input type="number" id="sub" placeholder="Digite 2 para subtração: ">
+        <input type="number" id="div" placeholder="Digite 3 para Divisão: ">
+        <input type="number" id="mult" placeholder="Digite 3 para Multiplicação: ">
+        <button type="button" onclick="mainController()">Resultado</button>
+    </form>
+    <span id="saida"></span>
+</body>
+
+</html>
+
+<script>
+    function mainController() {
+        var num1= parseInt(document.getElementById("v1").value);
+        var num2 = parseInt(document.getElementById("v2").value);
+        var op1 = parseInt(document.getElementById("adicao").value);
+        var op2 = parseInt(document.getElementById("sub").value);
+        var op3 = parseInt(document.getElementById("div").value);
+        var op4 = parseInt(document.getElementById("mult").value);
+        
+        document.getElementById("saida").innerHTML = ladoEmedida(num1, num2, op1, op2, op3);
+    }
+
+    function ladoEmedida() {
+        if (op1 ) { 
+            return +"Soma: " + (num1 + num2); 
+
+        }if (op2) {
+            return + "Subtração: " + (num1 - num2); 
+
+        }if (op3){
+             return + "Divisão: "+ (num1 / num2)
+
+        } else if (op4){
+            return + "Multiplicação: "+ (num1 * num2)
+        }
+    }
+</script>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>
+     16) Acrescente as seguintes mensagens à solução do exercício anterior conforme o caso. 
+        - Caso o número de lados seja inferior a 3 escrever NÃO É UM POLÍGONO. 
+        - Caso o número de lados seja superior a 5 escrever POLÍGONO NÃO IDENTIFICADO. 
+     Observação: Considere que o usuário poderá informar qualquer valor para o número de lados.
+          
+    </p>
+
+    <form>
+        <input type="number" id="lado" placeholder="Digite quantos lados tem:">
+        <button type="button" onclick="mainController()">Resultado</button>
+    </form>
+    <span id="saida"></span>
+</body>
+
+</html>
+
+<script>
+    function mainController() {
+        var l = parseInt(document.getElementById("lado").value);
+        
+        document.getElementById("saida").innerHTML = ladoEmedida( l );
+    }
+
+    function ladoEmedida() {
+        if (l < 3) { 
+            return "Não e Poligono"; 
+
+        } else if (l > 5) {
+            return "Polígono não identificado"; 
+
+        } 
+    }
+</script>
+    

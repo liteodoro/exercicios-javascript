@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        15) Escreva um programa para ler o número de lados de um polígono regular<br>
+         e a medida do lado (em cm). Calcular e imprimir o seguinte: 
+            - Se o número de lados for igual a 3 escrever TRIANGULO e o valor do seu perímetro. 
+            - Se o número de lados for igual a 4 escrever QUADRADO e o valor da sua área. 
+            - Se o número de lados for igual a 5 escrever PENTÁGONO. 
+          Observação: Considere que o usuário só informará os valores 3, 4 ou 5.
+
+    </p>
+    
+    <form>
+        <input type="number" id="lado" placeholder="Digite quantos lados tem:">
+        <input type="number" id="medida" placeholder="Qual a medida do lado cm:">
+        <button type="button" onclick="mainController()">Resultado</button>
+    </form>
+    <span id="saida"></span>
+</body>
+
+</html>
+
+<script>
+    function mainController() {
+        var l = parseInt(document.getElementById("lado").value);
+        var m = parseInt(document.getElementById("medida").value);
+        
+        document.getElementById("saida").innerHTML = ladoEmedida(l, m);
+    }
+
+    function ladoEmedida() {
+        if (l = 3) { 
+            return "Triângulo" +  (m * 3); //perimetro soma dos lados p= L+L+L
+
+        } if (l = 4) {
+            return "Quadrado" +  (m * m ); //a=b*h
+
+        } else 
+        
+           return "Pentagono";
+    }
+</script>
+    
+</body>
+</html>

@@ -16,27 +16,25 @@
     </p>
     
     <form>
-
-        <input type="text" id="n1" placeholder="Digite a numero:" onkeyup="nInteiro()">
-        <button type="button" onclick="nInteiro()">clicar</button>
-
+        <input type="number" id="n1" placeholder="Digite um valor">
+        <button type="button" onclick="mainController()">Ordenar</button>
     </form>
-
     <span id="saida"></span>
 </body>
 
 </html>
 
 <script>
-    function nInteiro() {
-        var n1 = parseInt(document.getElementById("n1").value);
+    function mainController() {
+        var p = parseInt(document.getElementById("n1").value);
+        document.getElementById('saida').innerHTML = parImpar(p);
+    }
 
-        if (n1 ) {
-            document.getElementById("saida").innerHTML = "Ímpar";
-
+    function parImpar(p = 0) {
+        if (p % 2 == 0) { 
+            return "PAR";
         } else {
-            document.getElementById("saida").innerHTML = "Par!!";
+            return "IMPAR";
         }
     }
 </script>
-    
