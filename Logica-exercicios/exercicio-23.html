@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        23) Escreva um programa que leia o valor de 3 ângulos de um triângulo e escreva 
+        se o triângulo é Acutângulo, Retângulo ou Obtusângulo. Sendo que: 
+            - Triângulo Retângulo: possui um ângulo reto. (igual a 90°) 
+            - Triângulo Obtusângulo: possui um ângulo obtuso. (maior que 90°) 
+            - Triângulo Acutângulo: possui três ângulos agudos. (menor que 90°) 
+
+    </p>
+    
+    <form>
+        <h4>Informe os numeros!!</h4>
+        <input type="number" id="l1" placeholder="Digite 1° lado:"><br>
+        <input type="number" id="l2" placeholder="Digite 2° lado:"><br>
+        <input type="number" id="l3" placeholder="Digite 3° lado:"><br>
+        <button type="button" onclick="mainController()">clica</button>
+    </form>
+    <span id="saida"></span>
+</body>
+
+</html>
+
+<script>
+    function mainController() {
+        var l1 = parseInt(document.getElementById("l1").value);
+        var l2 = parseInt(document.getElementById("l2").value);
+        var l3 = parseInt(document.getElementById("l3").value);
+        
+        document.getElementById("saida").innerHTML = maiores(l1, l2, l3);
+    }
+
+    function maiores(l1 = 0, l2 = 0, l3 = 0) {
+
+        if (l1 == l2 == l3){
+             return "Retângulo"; //if (l1=90) or (l2=90) or (l3=90) rsp Retangulo
+
+        } if (l1 > l2 > l3){
+            return "Obtusangulo"; //if (l1>90) or (l2>90) or (l3>90) resp Obtusangulo
+ 
+        }else 
+            return "Acutângulo"; 
+
+        } 
+
+    </script>
