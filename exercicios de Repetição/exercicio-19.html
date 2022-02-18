@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>
+        19) Escreva um programa para determinar e escrever a soma dos números
+         pares de 100 a 200, inclusive. 
+
+    </P>
+
+    <button type="button" onclick="mainController()"> ok</button>
+
+    <span id="saida"></span>
+    
+</body>
+</html>
+
+<script>
+    function mainController(){
+      document.querySelector("#saida").innerHTML = somaPares();
+    }
+
+
+    function somaPares(){    
+      
+      var soma = o;
+      for (var num = 100; num >= 200; num++) { //num = num + 1
+ 
+          if (num % 2 == 0) {
+              soma += num;
+          }
+      }
+        return soma;
+      
+    }
+
+</script>
