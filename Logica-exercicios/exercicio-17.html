@@ -19,41 +19,46 @@
     <form>
         <input type="number" id="v1" placeholder="Digite um numero: ">
         <input type="number" id="v2" placeholder="Digite o segundo numero: ">
-        <input type="number" id="adicao" placeholder="Digite 1 para Soma: ">
-        <input type="number" id="sub" placeholder="Digite 2 para subtração: ">
-        <input type="number" id="div" placeholder="Digite 3 para Divisão: ">
-        <input type="number" id="mult" placeholder="Digite 3 para Multiplicação: ">
-        <button type="button" onclick="mainController()">clica</button>
+
+    <label for="opc"> Operação </label>
+    <select name="opc" id="opc" onchange="mainController()">
+        <option value="1" selected>Adição</option>
+        <option value="2">Subtração</option>
+        <option value="3">Multiplicação</option>
+        <option value="4">Divisão</option>
+    </select>
+
+    <button type="button" onclick="mainController()">Clica</button>
     </form>
-    <span id="saida"></span>
+
+    <span id="sai"></span>
+
 </body>
 
 </html>
 
 <script>
     function mainController() {
-        var num1= parseInt(document.getElementById("v1").value);
-        var num2 = parseInt(document.getElementById("v2").value);
-        var op1 = parseInt(document.getElementById("adicao").value);
-        var op2 = parseInt(document.getElementById("sub").value);
-        var op3 = parseInt(document.getElementById("div").value);
-        var op4 = parseInt(document.getElementById("mult").value);
+        var v1= parseInt(document.getElementById("v1").value);
+        var v2 = parseInt(document.getElementById("v2").value);
+        var opc = parseInt(document.getElementById("opc").value);
+        console.log(v1, v2, opc);
+        document.getElementById("sai").innerHTML = "Resposta: " + valoresInteiros(v1, v2, opc);
         
-        document.getElementById("saida").innerHTML = ladoEmedida(num1, num2, op1, op2, op3, op4);
     }
 
-    function ladoEmedida() {
-        if (op1 ) { 
-            return +"Soma: " + (num1 + num2); 
+    function valoresInteiros(v1 = 0, v2 = 0, opc = 0) {
+        if (opc == 1 ) { 
+            return v1 + v2; 
 
-        }if (op2) {
-            return + "Subtração: " + (num1 - num2); 
+        }else if (opc == 2) {
+            return v1 - v2; 
 
-        }if (op3){
-             return + "Divisão: "+ (num1 / num2)
+        }else if (opc == 3){
+             return v1 * v2;
 
-        } else if (op4){
-            return + "Multiplicação: "+ (num1 * num2)
+        } else {
+            return v1 / v2;
         }
     }
 </script>

@@ -19,8 +19,8 @@
     </p>
     
     <form>
-        <input type="number" id="lado" placeholder="Digite quantos lados tem:">
-        <input type="number" id="medida" placeholder="Qual a medida do lado cm:">
+        <input type="number" id="l" placeholder="Digite quantos lados tem:">
+        <input type="number" id="m" placeholder="Qual a medida do lado cm:">
         <button type="button" onclick="mainController()">Resultado</button>
     </form>
     <span id="saida"></span>
@@ -30,13 +30,13 @@
 
 <script>
     function mainController() {
-        var l = parseInt(document.getElementById("lado").value);
-        var m = parseInt(document.getElementById("medida").value);
+        var l = parseInt(document.getElementById("l").value);
+        var m = parseInt(document.getElementById("m").value);
         
-        document.getElementById("saida").innerHTML = ladoEmedida(l, m);
+        document.getElementById("saida").innerHTML = " resultado" + ladoEmedida(l, m);
     }
 
-    function ladoEmedida() {
+    function ladoEmedida(l = 0, m = 0) {
         if (l = 3) { 
             return "Triângulo" +  (m * 3); //perimetro soma dos lados p= L+L+L
 

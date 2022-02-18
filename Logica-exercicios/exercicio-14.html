@@ -26,17 +26,17 @@
 
 <script>
     function mainController() {
-        var g1 = parseInt(document.getElementById("v1").value);
-        var g2 = parseInt(document.getElementById("v2").value);
+        var v1 = parseInt(document.getElementById("v1").value);
+        var v2 = parseInt(document.getElementById("v2").value);
         
-        document.getElementById('saida').innerHTML = gremioInter(g1, g2);
+        document.getElementById('saida').innerHTML = "resultado: " + gremioInter(v1, v2);
     }
 
-    function gremioInter() {
+    function gremioInter( g1 = 0, g2 = 0 ) {
         if (g1 == g2) { 
             return "Empate";
 
-        } if (g1 > g2) {
+        } else if (g1 > g2) {
             return "Grêmio Campeão";
 
         } else

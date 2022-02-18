@@ -17,7 +17,7 @@
     </p>
 
     <form>
-        <input type="number" id="lado" placeholder="Digite quantos lados tem:">
+        <input type="number" id="n1" placeholder="Digite quantos lados tem:">
         <button type="button" onclick="mainController()">Resultado</button>
     </form>
     <span id="saida"></span>
@@ -27,16 +27,16 @@
 
 <script>
     function mainController() {
-        var l = parseInt(document.getElementById("lado").value);
+        var n1 = parseInt(document.getElementById("n1").value);
         
-        document.getElementById("saida").innerHTML = ladoEmedida( l );
+        document.getElementById("saida").innerHTML = ladoEmedida( n1 );
     }
 
-    function ladoEmedida() {
-        if (l < 3) { 
+    function ladoEmedida(n1 = 0) {
+        if (n1 < 3) { 
             return "Não e Poligono"; 
 
-        } else if (l > 5) {
+        } else  {
             return "Polígono não identificado"; 
 
         } 

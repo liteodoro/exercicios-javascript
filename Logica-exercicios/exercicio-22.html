@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        22) Escreva um programa que leia a idade de 2 homens e 2 mulheres 
+        (considere que a idade dos  homens será sempre diferente, assim como das mulheres).
+         Calcule e escreva a soma das idades do homem mais velho com a mulher mais nova,
+          e o produto das idades do homem mais novo com a mulher mais velha. 
+         
+    </p>
+    <form>
+        <h4>Informe os numeros!!</h4>
+        <input type="number" id="h1" placeholder="Digite idade do 1° homem:"><br>
+        <input type="number" id="h2" placeholder="Digite idade do 2° homem:"><br>
+        <input type="number" id="m1" placeholder="Digite idade da 1° mulher:"><br>
+        <input type="number" id="m2" placeholder="Digite idade da 2° mulher:"><br>
+        <button type="button" onclick="mainController()">soma</button>
+    </form>
+    <span id="saida"></span>
+</body>
+
+</html>
+
+<script>
+    function mainController() {
+        var h1 = parseInt(document.getElementById("h1").value);
+        var h2 = parseInt(document.getElementById("h2").value);
+        var m1 = parseInt(document.getElementById("m1").value);
+        var m2 = parseInt(document.getElementById("m2").value);
+        
+        document.getElementById("saida").innerHTML = hEmSoma(h1, h2, m1, m2);
+    }
+
+    function hEmSoma(h1 = 0, h2 = 0, m1 = 0, m2 = 0) {
+
+        if (h1 > h2)  {
+             return ""; 
+
+        } if (m1 < m2){
+            return ""; 
+ 
+        } else if(h1 > h2)
+            return ""; 
+
+        }
+
+    </script>
+    
+</body>
+</html>
