@@ -40,14 +40,12 @@
 
     function hEmSoma(h1 = 0, h2 = 0, m1 = 0, m2 = 0) {
 
-        if (h1 = h2) and (m1 = m2);{
-             return "Idades Iguais!! "; 
 
-        }if (h1 > h2) and (m1 < m2); {
+        if (h1 > h2) and (m1 < m2); {
              return "Homen mais velho e mulher mais nova! soma: " + (h1 + m1) ;
              return "Homen mais novo e mulher mais velha! soma: " + (h2 * m2);  
 
-        }if (h1 > h2 ) and (m1 > m2); {
+        }if (h1 > h2 ) and (m1 > m2); { 
             return "Homem mais velho e mulher mais nova! soma: " + (h1 + m2);
             return "Homen mais novo e mulher mais velha! soma: " + (h2 * m1);  
  
@@ -55,12 +53,22 @@
             return "Homen mais velho e mulher mais nova! soma: " + (h2 + m1); 
             return "Homen mais novo e mulher mais velha! Soma: " + (h1 * m2); 
 
-        } {
+        }if (h2 > h1) and (m2 > m1)
             return "Homen mais velho e mulher mais nova! soma: " + (h2 + m2); 
             return "Homen mais novo e mulher mais velha! soma: " + (h1 * m1);
+
+         (h1 = h2)  (m1 = m2);{ //tentei colocar else e and mas ñ aceitou.
+             return "Idades Iguais!! "; 
         }
       
     </script>
+
+    OBS: tentei fazer o exercicio mas da erro no else fica vermelho e ñ tenho ideia
+     do que pode ser. O operador and esta errado assim? alias ele pode ser declardo
+     dessa maneira? Tentei colocar Or pra ver se ia mas tb ñ deu. 
+     O que pode ser feito? Ou esta errado o jeito que montei e ñ tem solução?
+
     
 </body>
 </html>
+
